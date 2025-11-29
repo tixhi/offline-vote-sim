@@ -34,7 +34,7 @@ export const VotingInterface = () => {
   if (hasVoted) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <Card className="max-w-md shadow-card">
+        <Card className="max-w-md glass-card shadow-card animate-in fade-in scale-in duration-500">
           <CardContent className="pt-6 text-center space-y-4">
             <div className="flex justify-center">
               <div className="w-16 h-16 rounded-full bg-vote-success/10 flex items-center justify-center">
@@ -61,7 +61,7 @@ export const VotingInterface = () => {
   return (
     <div className="space-y-6">
       {pendingVotes > 0 && (
-        <div className="bg-vote-pending/10 border border-vote-pending/20 rounded-lg p-4 flex items-center gap-3">
+        <div className="glass border-vote-pending/30 rounded-lg p-4 flex items-center gap-3 animate-in fade-in slide-in-right duration-300">
           <AlertCircle className="w-5 h-5 text-vote-pending flex-shrink-0" />
           <div className="flex-1">
             <p className="font-semibold text-foreground">Vote Pending</p>
@@ -76,10 +76,10 @@ export const VotingInterface = () => {
         {candidates.map((candidate) => (
           <Card
             key={candidate.id}
-            className={`cursor-pointer transition-all shadow-card hover:shadow-block ${
+            className={`cursor-pointer glass-card glass-hover ${
               selectedCandidate === candidate.id
-                ? 'ring-2 ring-primary border-primary'
-                : 'hover:border-primary/50'
+                ? 'ring-2 ring-primary border-primary bg-primary/5'
+                : ''
             }`}
             onClick={() => setSelectedCandidate(candidate.id)}
           >

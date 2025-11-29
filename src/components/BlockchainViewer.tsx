@@ -23,7 +23,7 @@ export const BlockchainViewer = () => {
               <div className="absolute left-8 top-full w-0.5 h-4 bg-blockchain-link -z-10" />
             )}
             
-            <Card className="shadow-block hover:shadow-card transition-shadow">
+            <Card className="glass-card glass-hover animate-in fade-in duration-300" style={{ animationDelay: `${index * 100}ms` }}>
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
@@ -117,7 +117,7 @@ export const BlockchainViewer = () => {
         ))}
       </div>
 
-      <Card className="bg-muted/50">
+      <Card className="glass border-vote-success/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-center gap-2 text-sm">
             <div className="w-2 h-2 rounded-full bg-vote-success animate-pulse" />

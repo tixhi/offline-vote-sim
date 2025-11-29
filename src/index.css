@@ -159,4 +159,45 @@ All colors MUST be HSL.
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+  
+  /* Glassmorphism Effects */
+  .glass {
+    background: hsl(var(--card) / 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+  
+  .glass-strong {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  .glass-nav {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid hsl(var(--border) / 0.2);
+  }
+  
+  .glass-card {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--card) / 0.5) 0%,
+      hsl(var(--card) / 0.3) 100%
+    );
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.4);
+    box-shadow: 0 8px 32px 0 hsl(var(--foreground) / 0.1);
+  }
+  
+  .glass-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .glass-hover:hover {
+    background: hsl(var(--card) / 0.6);
+    border-color: hsl(var(--primary) / 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 hsl(var(--primary) / 0.2);
+  }
 }

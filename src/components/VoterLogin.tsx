@@ -21,7 +21,13 @@ export const VoterLogin = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+      </div>
+      
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-2">
           <div className="flex justify-center mb-4">
@@ -36,7 +42,7 @@ export const VoterLogin = () => {
           <p className="text-muted-foreground">Secure Blockchain Voting System</p>
         </div>
 
-        <Card className="shadow-card">
+        <Card className="glass-card shadow-card">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Vote className="w-5 h-5 text-primary" />
