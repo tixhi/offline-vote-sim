@@ -28,7 +28,7 @@ export const ResultsDashboard = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className="shadow-card">
+        <Card className="glass-card shadow-card animate-in fade-in duration-300">
           <CardHeader className="pb-3">
             <CardDescription>Total Votes Cast</CardDescription>
             <CardTitle className="text-3xl flex items-center gap-2">
@@ -38,7 +38,7 @@ export const ResultsDashboard = () => {
           </CardHeader>
         </Card>
 
-        <Card className="shadow-card">
+        <Card className="glass-card shadow-card animate-in fade-in duration-300" style={{ animationDelay: '100ms' }}>
           <CardHeader className="pb-3">
             <CardDescription>Blocks Mined</CardDescription>
             <CardTitle className="text-3xl flex items-center gap-2">
@@ -48,7 +48,7 @@ export const ResultsDashboard = () => {
           </CardHeader>
         </Card>
 
-        <Card className="shadow-card">
+        <Card className="glass-card shadow-card animate-in fade-in duration-300" style={{ animationDelay: '200ms' }}>
           <CardHeader className="pb-3">
             <CardDescription>Voter Turnout</CardDescription>
             <CardTitle className="text-3xl flex items-center gap-2">
@@ -60,7 +60,7 @@ export const ResultsDashboard = () => {
       </div>
 
       {totalVotes > 0 && (
-        <Card className="shadow-block gradient-primary text-primary-foreground">
+        <Card className="glass-strong shadow-block gradient-primary text-primary-foreground animate-in fade-in scale-in duration-500">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Trophy className="w-8 h-8" />
@@ -86,7 +86,7 @@ export const ResultsDashboard = () => {
       <div className="space-y-4">
         <h3 className="text-xl font-display font-bold">All Candidates</h3>
         {resultsWithCandidates.map((candidate, index) => (
-          <Card key={candidate.id} className="shadow-card">
+          <Card key={candidate.id} className="glass-card shadow-card animate-in fade-in duration-300" style={{ animationDelay: `${index * 100}ms` }}>
             <CardContent className="pt-6">
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
@@ -125,7 +125,7 @@ export const ResultsDashboard = () => {
       </div>
 
       {totalVotes === 0 && (
-        <Card className="shadow-card">
+        <Card className="glass-card shadow-card">
           <CardContent className="pt-6 text-center text-muted-foreground">
             <Vote className="w-12 h-12 mx-auto mb-4 opacity-50" />
             <p>No votes have been cast yet. Start voting to see results!</p>
